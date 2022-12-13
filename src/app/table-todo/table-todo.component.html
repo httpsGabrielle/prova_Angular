@@ -1,7 +1,7 @@
-<div class="container">
-  <table class="table border rounded mt-5 p-3">
-      <thead style="background-color:#6e7adc">
-        <tr>
+<div class="container border rounded p-3 mt-5" style="width: 60%">
+  <table class="table">
+      <thead>
+        <tr style="color:#7665c3">
           <th scope="col">User Id</th>
           <th scope="col">ID</th>
           <th scope="col">Title</th>
@@ -9,7 +9,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let i of todo">
+        <tr *ngFor="let i of todo" class="table-light">
           <th scope="row">{{i.userId}}</th>
           <td>{{i.id}}</td>
           <td>{{i.title}}</td>
