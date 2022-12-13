@@ -10,9 +10,14 @@ import { ToDoService } from '../to-do.service';
 export class TableTodoComponent implements OnInit {
 
   todo: Todo[] = [];
-  constructor() { }
+  constructor(private todoService: ToDoService) { }
 
   ngOnInit(): void {
+    this.getTodo();
   }
 
+  getTodo(): void {
+    this.todoService.getTodo()
+        .subscribe(todo => this.todo = todo );
+  }
 }

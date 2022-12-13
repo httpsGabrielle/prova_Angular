@@ -1,1 +1,20 @@
-<p>table-todo works!</p>
+<div class="container">
+  <table class="table border rounded mt-5 p-3">
+      <thead style="background-color:#6e7adc">
+        <tr>
+          <th scope="col">User Id</th>
+          <th scope="col">ID</th>
+          <th scope="col">Title</th>
+          <th scope="col">Completed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let i of todo">
+          <th scope="row">{{i.userId}}</th>
+          <td>{{i.id}}</td>
+          <td>{{i.title}}</td>
+          <td>{{i.completed}}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
